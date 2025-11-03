@@ -1,10 +1,10 @@
-const API = "https://jsonplaceholder.typicode.com/users";
+const API = "./alunos.json";
 
 const lista = document.getElementById("lista");
 const detalhes = document.getElementById("detalhes");
 const inputBuscar = document.getElementById("inputBuscar");
 const btnBuscar = document.getElementById("btnBuscar");
-const btnReset = document.getElementById("btnReset");
+const btnReset = document.getElementById("btnResetar");
 
 let alunos = [];
 
@@ -50,7 +50,6 @@ function mostrarDetalhes(u) {
     <h2>${u.name}</h2>
     <p>Email: ${u.email}</p>
     <p>Telefone: ${u.phone}</p>
-    <p>Cidade: ${u.address.city}</p>
     <button id="voltar">Voltar</button>
   `; // Define o conteúdo HTML dos detalhes do usuário
   // display é uma propriedade CSS que define como um elemento é exibido na página

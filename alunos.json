@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "name": "Isabela Monteiro",
+    "email": "isabela.monteiro@brightminds.com",
+    "phone": "22 99791-1632",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 2,
+    "name": "Diego Ramos",
+    "email": "diego.ramos@brightminds.com",
+    "phone": "27 99944-4718",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 3,
+    "name": "Julia Cavalcanti",
+    "email": "julia.cavalcanti@brightminds.com",
+    "phone": "51 98266-4322",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 4,
+    "name": "João Ribeiro",
+    "email": "joão.ribeiro@brightminds.com",
+    "phone": "77 98121-5378",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 5,
+    "name": "Caio Araujo",
+    "email": "caio.araujo@brightminds.com",
+    "phone": "30 99102-2658",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 6,
+    "name": "Felipe Rezende",
+    "email": "felipe.rezende@brightminds.com",
+    "phone": "48 99908-7674",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 7,
+    "name": "Ana Mendes",
+    "email": "ana.mendes@brightminds.com",
+    "phone": "51 99933-6018",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 8,
+    "name": "Eduardo Martins",
+    "email": "eduardo.martins@brightminds.com",
+    "phone": "48 99439-4586",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 9,
+    "name": "Lucas Teixeira",
+    "email": "lucas.teixeira@brightminds.com",
+    "phone": "52 98895-7552",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 10,
+    "name": "Carolina Lima",
+    "email": "carolina.lima@brightminds.com",
+    "phone": "32 98459-6473",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 11,
+    "name": "Carolina Dias",
+    "email": "carolina.dias@brightminds.com",
+    "phone": "26 99264-6075",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 12,
+    "name": "Felipe Carvalho",
+    "email": "felipe.carvalho@brightminds.com",
+    "phone": "64 98373-8402",
+    "turma": "2º ano",
+    "idade": 17
+  },
+  {
+    "id": 13,
+    "name": "Valentina Freitas",
+    "email": "valentina.freitas@brightminds.com",
+    "phone": "64 98982-5577",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 14,
+    "name": "Felipe Santos",
+    "email": "felipe.santos@brightminds.com",
+    "phone": "73 99575-6694",
+    "turma": "3º ano",
+    "idade": 15
+  },
+  {
+    "id": 15,
+    "name": "Manuela Correia",
+    "email": "manuela.correia@brightminds.com",
+    "phone": "30 99227-9632",
+    "turma": "1º ano",
+    "idade": 17
+  },
+  {
+    "id": 16,
+    "name": "Beatriz Oliveira",
+    "email": "beatriz.oliveira@brightminds.com",
+    "phone": "74 99217-6226",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 17,
+    "name": "Pedro Freitas",
+    "email": "pedro.freitas@brightminds.com",
+    "phone": "46 99022-3098",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 18,
+    "name": "Rebeca Teixeira",
+    "email": "rebeca.teixeira@brightminds.com",
+    "phone": "90 98180-6073",
+    "turma": "3º ano",
+    "idade": 16
+  },
+  {
+    "id": 19,
+    "name": "Caio Silva",
+    "email": "caio.silva@brightminds.com",
+    "phone": "21 98908-2311",
+    "turma": "3º ano",
+    "idade": 16
+  },
+  {
+    "id": 20,
+    "name": "Gabriel Teixeira",
+    "email": "gabriel.teixeira@brightminds.com",
+    "phone": "12 98208-1436",
+    "turma": "3º ano",
+    "idade": 15
+  },
+  {
+    "id": 21,
+    "name": "Ricardo Lima",
+    "email": "ricardo.lima@brightminds.com",
+    "phone": "86 99245-1783",
+    "turma": "2º ano",
+    "idade": 15
+  },
+  {
+    "id": 22,
+    "name": "João Barbosa",
+    "email": "joão.barbosa@brightminds.com",
+    "phone": "16 98950-6645",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 23,
+    "name": "Gabriel Carvalho",
+    "email": "gabriel.carvalho@brightminds.com",
+    "phone": "92 98585-6680",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 24,
+    "name": "Carolina Dias",
+    "email": "carolina.dias@brightminds.com",
+    "phone": "61 98260-8789",
+    "turma": "3º ano",
+    "idade": 16
+  },
+  {
+    "id": 25,
+    "name": "Eduardo Carvalho",
+    "email": "eduardo.carvalho@brightminds.com",
+    "phone": "74 98848-6911",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 26,
+    "name": "Fernanda Mendes",
+    "email": "fernanda.mendes@brightminds.com",
+    "phone": "72 98266-5202",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 27,
+    "name": "Cecília Martins",
+    "email": "cecília.martins@brightminds.com",
+    "phone": "32 98936-1812",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 28,
+    "name": "Patrícia Barbosa",
+    "email": "patrícia.barbosa@brightminds.com",
+    "phone": "28 98061-5911",
+    "turma": "1º ano",
+    "idade": 17
+  },
+  {
+    "id": 29,
+    "name": "Arthur Cavalcanti",
+    "email": "arthur.cavalcanti@brightminds.com",
+    "phone": "88 99319-7471",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 30,
+    "name": "Gustavo Machado",
+    "email": "gustavo.machado@brightminds.com",
+    "phone": "60 98440-2262",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 31,
+    "name": "Luana Carvalho",
+    "email": "luana.carvalho@brightminds.com",
+    "phone": "75 99517-3844",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 32,
+    "name": "Mariana Cardoso",
+    "email": "mariana.cardoso@brightminds.com",
+    "phone": "24 99087-9998",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 33,
+    "name": "Caio Machado",
+    "email": "caio.machado@brightminds.com",
+    "phone": "54 99257-3001",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 34,
+    "name": "Vinícius Ribeiro",
+    "email": "vinícius.ribeiro@brightminds.com",
+    "phone": "36 99698-3254",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 35,
+    "name": "Enzo Nunes",
+    "email": "enzo.nunes@brightminds.com",
+    "phone": "17 99402-9816",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 36,
+    "name": "Valentina Gomes",
+    "email": "valentina.gomes@brightminds.com",
+    "phone": "82 98063-1551",
+    "turma": "2º ano",
+    "idade": 17
+  },
+  {
+    "id": 37,
+    "name": "Beatriz Almeida",
+    "email": "beatriz.almeida@brightminds.com",
+    "phone": "56 99443-3913",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 38,
+    "name": "Thiago Martins",
+    "email": "thiago.martins@brightminds.com",
+    "phone": "88 99636-9028",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 39,
+    "name": "Gabriel Souza",
+    "email": "gabriel.souza@brightminds.com",
+    "phone": "18 98429-2103",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 40,
+    "name": "Camila Ribeiro",
+    "email": "camila.ribeiro@brightminds.com",
+    "phone": "27 99504-1898",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 41,
+    "name": "Eduardo Souza",
+    "email": "eduardo.souza@brightminds.com",
+    "phone": "61 99689-7793",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 42,
+    "name": "Felipe Fernandes",
+    "email": "felipe.fernandes@brightminds.com",
+    "phone": "18 99635-6674",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 43,
+    "name": "Sofia Mendes",
+    "email": "sofia.mendes@brightminds.com",
+    "phone": "54 98754-1786",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 44,
+    "name": "Beatriz Lima",
+    "email": "beatriz.lima@brightminds.com",
+    "phone": "77 99947-3659",
+    "turma": "2º ano",
+    "idade": 17
+  },
+  {
+    "id": 45,
+    "name": "Pedro Pereira",
+    "email": "pedro.pereira@brightminds.com",
+    "phone": "52 98741-9902",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 46,
+    "name": "Diego Monteiro",
+    "email": "diego.monteiro@brightminds.com",
+    "phone": "77 98288-8606",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 47,
+    "name": "Igor Dias",
+    "email": "igor.dias@brightminds.com",
+    "phone": "94 98151-8907",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 48,
+    "name": "Isabela Barbosa",
+    "email": "isabela.barbosa@brightminds.com",
+    "phone": "74 98171-6360",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 49,
+    "name": "Gustavo Ribeiro",
+    "email": "gustavo.ribeiro@brightminds.com",
+    "phone": "29 99330-7436",
+    "turma": "3º ano",
+    "idade": 15
+  },
+  {
+    "id": 50,
+    "name": "Pedro Rezende",
+    "email": "pedro.rezende@brightminds.com",
+    "phone": "40 98644-3035",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 51,
+    "name": "Enzo Vieira",
+    "email": "enzo.vieira@brightminds.com",
+    "phone": "28 98668-7812",
+    "turma": "2º ano",
+    "idade": 17
+  },
+  {
+    "id": 52,
+    "name": "Gustavo Barbosa",
+    "email": "gustavo.barbosa@brightminds.com",
+    "phone": "72 99467-6502",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 53,
+    "name": "Leonardo Ramos",
+    "email": "leonardo.ramos@brightminds.com",
+    "phone": "19 98374-6242",
+    "turma": "2º ano",
+    "idade": 15
+  },
+  {
+    "id": 54,
+    "name": "Samuel Fernandes",
+    "email": "samuel.fernandes@brightminds.com",
+    "phone": "40 99922-8707",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 55,
+    "name": "Mariana Carvalho",
+    "email": "mariana.carvalho@brightminds.com",
+    "phone": "82 99034-7764",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 56,
+    "name": "Ricardo Machado",
+    "email": "ricardo.machado@brightminds.com",
+    "phone": "95 99882-2873",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 57,
+    "name": "Camila Lima",
+    "email": "camila.lima@brightminds.com",
+    "phone": "76 98310-4420",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 58,
+    "name": "Arthur Machado",
+    "email": "arthur.machado@brightminds.com",
+    "phone": "26 98489-4973",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 59,
+    "name": "André Souza",
+    "email": "andré.souza@brightminds.com",
+    "phone": "30 99162-6543",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 60,
+    "name": "Sofia Vieira",
+    "email": "sofia.vieira@brightminds.com",
+    "phone": "62 98879-8339",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 61,
+    "name": "Lucas Martins",
+    "email": "lucas.martins@brightminds.com",
+    "phone": "30 99662-6612",
+    "turma": "3º ano",
+    "idade": 16
+  },
+  {
+    "id": 62,
+    "name": "Bruna Carvalho",
+    "email": "bruna.carvalho@brightminds.com",
+    "phone": "86 98988-2882",
+    "turma": "2º ano",
+    "idade": 17
+  },
+  {
+    "id": 63,
+    "name": "Julia Dias",
+    "email": "julia.dias@brightminds.com",
+    "phone": "73 98423-3754",
+    "turma": "2º ano",
+    "idade": 15
+  },
+  {
+    "id": 64,
+    "name": "Diego Mendes",
+    "email": "diego.mendes@brightminds.com",
+    "phone": "91 98604-4679",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 65,
+    "name": "Letícia Lima",
+    "email": "letícia.lima@brightminds.com",
+    "phone": "27 98693-6276",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 66,
+    "name": "Vitória Dias",
+    "email": "vitória.dias@brightminds.com",
+    "phone": "96 99374-1948",
+    "turma": "2º ano",
+    "idade": 17
+  },
+  {
+    "id": 67,
+    "name": "Manuela Costa",
+    "email": "manuela.costa@brightminds.com",
+    "phone": "57 99742-8125",
+    "turma": "1º ano",
+    "idade": 17
+  },
+  {
+    "id": 68,
+    "name": "Pedro Gomes",
+    "email": "pedro.gomes@brightminds.com",
+    "phone": "59 99513-3573",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 69,
+    "name": "Julia Ribeiro",
+    "email": "julia.ribeiro@brightminds.com",
+    "phone": "32 98614-8130",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 70,
+    "name": "Lucas Vieira",
+    "email": "lucas.vieira@brightminds.com",
+    "phone": "72 99445-9801",
+    "turma": "1º ano",
+    "idade": 17
+  },
+  {
+    "id": 71,
+    "name": "Gustavo Vieira",
+    "email": "gustavo.vieira@brightminds.com",
+    "phone": "96 99226-5854",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 72,
+    "name": "Isabela Almeida",
+    "email": "isabela.almeida@brightminds.com",
+    "phone": "68 98829-6757",
+    "turma": "3º ano",
+    "idade": 16
+  },
+  {
+    "id": 73,
+    "name": "Gabriela Carvalho",
+    "email": "gabriela.carvalho@brightminds.com",
+    "phone": "51 99354-2259",
+    "turma": "2º ano",
+    "idade": 15
+  },
+  {
+    "id": 74,
+    "name": "Eduardo Teixeira",
+    "email": "eduardo.teixeira@brightminds.com",
+    "phone": "36 99786-3321",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 75,
+    "name": "Matheus Carvalho",
+    "email": "matheus.carvalho@brightminds.com",
+    "phone": "93 99786-1509",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 76,
+    "name": "Carolina Almeida",
+    "email": "carolina.almeida@brightminds.com",
+    "phone": "49 99359-7109",
+    "turma": "3º ano",
+    "idade": 15
+  },
+  {
+    "id": 77,
+    "name": "Luana Teixeira",
+    "email": "luana.teixeira@brightminds.com",
+    "phone": "17 99097-9051",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 78,
+    "name": "Ricardo Machado",
+    "email": "ricardo.machado@brightminds.com",
+    "phone": "37 99738-3709",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 79,
+    "name": "Maria Freitas",
+    "email": "maria.freitas@brightminds.com",
+    "phone": "71 99487-2217",
+    "turma": "3º ano",
+    "idade": 16
+  },
+  {
+    "id": 80,
+    "name": "Rafael Cavalcanti",
+    "email": "rafael.cavalcanti@brightminds.com",
+    "phone": "92 98163-3475",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 81,
+    "name": "Gustavo Santos",
+    "email": "gustavo.santos@brightminds.com",
+    "phone": "10 99566-7876",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 82,
+    "name": "Letícia Lima",
+    "email": "letícia.lima@brightminds.com",
+    "phone": "53 98955-4416",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 83,
+    "name": "Helena Cardoso",
+    "email": "helena.cardoso@brightminds.com",
+    "phone": "28 99264-8312",
+    "turma": "1º ano",
+    "idade": 16
+  },
+  {
+    "id": 84,
+    "name": "Lucas Silva",
+    "email": "lucas.silva@brightminds.com",
+    "phone": "87 99728-9271",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 85,
+    "name": "Leonardo Silva",
+    "email": "leonardo.silva@brightminds.com",
+    "phone": "75 98313-9789",
+    "turma": "3º ano",
+    "idade": 15
+  },
+  {
+    "id": 86,
+    "name": "Leonardo Lima",
+    "email": "leonardo.lima@brightminds.com",
+    "phone": "59 99088-9240",
+    "turma": "1º ano",
+    "idade": 17
+  },
+  {
+    "id": 87,
+    "name": "Letícia Peixoto",
+    "email": "letícia.peixoto@brightminds.com",
+    "phone": "51 99258-7947",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 88,
+    "name": "Letícia Mendes",
+    "email": "letícia.mendes@brightminds.com",
+    "phone": "88 98318-2149",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 89,
+    "name": "Maria Dias",
+    "email": "maria.dias@brightminds.com",
+    "phone": "18 98726-8201",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 90,
+    "name": "André Lima",
+    "email": "andré.lima@brightminds.com",
+    "phone": "67 99092-9093",
+    "turma": "1º ano",
+    "idade": 18
+  },
+  {
+    "id": 91,
+    "name": "Diego Correia",
+    "email": "diego.correia@brightminds.com",
+    "phone": "33 99519-8821",
+    "turma": "3º ano",
+    "idade": 16
+  },
+  {
+    "id": 92,
+    "name": "Felipe Dias",
+    "email": "felipe.dias@brightminds.com",
+    "phone": "52 98818-8112",
+    "turma": "1º ano",
+    "idade": 17
+  },
+  {
+    "id": 93,
+    "name": "Henrique Lima",
+    "email": "henrique.lima@brightminds.com",
+    "phone": "89 98057-2375",
+    "turma": "2º ano",
+    "idade": 17
+  },
+  {
+    "id": 94,
+    "name": "Vitória Gomes",
+    "email": "vitória.gomes@brightminds.com",
+    "phone": "49 99948-4847",
+    "turma": "2º ano",
+    "idade": 18
+  },
+  {
+    "id": 95,
+    "name": "Samuel Silva",
+    "email": "samuel.silva@brightminds.com",
+    "phone": "98 98490-2890",
+    "turma": "3º ano",
+    "idade": 18
+  },
+  {
+    "id": 96,
+    "name": "Carolina Fernandes",
+    "email": "carolina.fernandes@brightminds.com",
+    "phone": "77 98040-6118",
+    "turma": "3º ano",
+    "idade": 17
+  },
+  {
+    "id": 97,
+    "name": "Ricardo Silva",
+    "email": "ricardo.silva@brightminds.com",
+    "phone": "57 98629-8807",
+    "turma": "2º ano",
+    "idade": 16
+  },
+  {
+    "id": 98,
+    "name": "Sofia Mendes",
+    "email": "sofia.mendes@brightminds.com",
+    "phone": "33 99346-3546",
+    "turma": "2º ano",
+    "idade": 15
+  },
+  {
+    "id": 99,
+    "name": "Mariana Silva",
+    "email": "mariana.silva@brightminds.com",
+    "phone": "19 98360-7724",
+    "turma": "1º ano",
+    "idade": 15
+  },
+  {
+    "id": 100,
+    "name": "Igor Ribeiro",
+    "email": "igor.ribeiro@brightminds.com",
+    "phone": "68 99967-9322",
+    "turma": "2º ano",
+    "idade": 17
+  }
+]
