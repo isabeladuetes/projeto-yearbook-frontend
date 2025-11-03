@@ -1,14 +1,6 @@
 [
   {
     "id": 1,
-    "name": "Felipe Dias",
-    "email": "felipe.dias@brightminds.com",
-    "phone": "52 98818-8112",
-    "materia": "matemática",
-    "idade": 38
-  },
-  {
-    "id": 2,
     "name": "Juliana Ramos",
     "email": "juliana.ramos@brightminds.com",
     "phone": "52 98122-3344",
@@ -16,7 +8,7 @@
     "idade": 29
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "Carlos Nogueira",
     "email": "carlos.nogueira@brightminds.com",
     "phone": "52 98765-1122",
@@ -24,7 +16,7 @@
     "idade": 41
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "Amanda Freitas",
     "email": "amanda.freitas@brightminds.com",
     "phone": "52 98214-7789",
@@ -32,7 +24,7 @@
     "idade": 33
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Marcos Tavares",
     "email": "marcos.tavares@brightminds.com",
     "phone": "52 98477-6655",
@@ -40,7 +32,7 @@
     "idade": 36
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Renata Oliveira",
     "email": "renata.oliveira@brightminds.com",
     "phone": "52 98653-2299",
@@ -48,7 +40,7 @@
     "idade": 30
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Thiago Martins",
     "email": "thiago.martins@brightminds.com",
     "phone": "52 98844-9077",
@@ -56,7 +48,7 @@
     "idade": 35
   },
   {
-    "id": 8,
+    "id": 7,
     "name": "Fernanda Lopes",
     "email": "fernanda.lopes@brightminds.com",
     "phone": "52 98119-4477",
@@ -64,7 +56,7 @@
     "idade": 28
   },
   {
-    "id": 9,
+    "id": 8,
     "name": "Gabriel Souza",
     "email": "gabriel.souza@brightminds.com",
     "phone": "52 98900-5544",
@@ -72,12 +64,20 @@
     "idade": 40
   },
   {
-    "id": 10,
+    "id": 9,
     "name": "Patrícia Moreira",
     "email": "patricia.moreira@brightminds.com",
     "phone": "52 98334-6678",
     "materia": "química",
     "idade": 32
+  },
+  {
+    "id": 10,
+    "name": "Eduardo Lima",
+    "email": "eduardo.lima@brightminds.com",
+    "phone": "52 98211-5533",
+    "materia": "matemática",
+    "idade": 37
   },
   {
     "id": 11,
