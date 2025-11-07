@@ -6,28 +6,28 @@ const inputBuscar = document.getElementById("inputBuscar");
 const btnBuscar = document.getElementById("btnBuscar");
 const btnReset = document.getElementById("btnReset");
 
-let usuarios = [];
+let professores = [];
 
-async function carregarUsuarios() {
+async function carregarprofessores() {
     try {
         const resposta = await fetch(API);
         const dados = await resposta.json();
-        usuarios = dados;
-        mostrarLista(usuarios);
+        professores = dados;
+        mostrarLista(professores);
     } catch (error) {
-        console.error("Erro ao carregar usuarios", error);
-        lista.innerHTML = "<p> Erro ao carregar usuarios. </p>"
+        console.error("Erro ao carregar professores", error);
+        lista.innerHTML = "<p> Erro ao carregar professores. </p>"
     }
 }
 
-carregarUsuarios();
+carregarprofessores();
 
 function mostrarLista(array) {
     lista.innerHTML = "";
     array.map((u) => {
         const div = document.createElement("div");
         div.textContent = u.name;
-        div.className = "usuario";
+        div.className = "professor";
         div.onclick = () => mostrarDetalhes(u);
         lista.appendChild(div);
     })
@@ -35,13 +35,13 @@ function mostrarLista(array) {
 
 btnBuscar.onclick = () => {
     const termo = inputBuscar.value.toLowerCase();
-    const filtrados = usuarios.filter((u) => u.name.toLowerCase().includes(termo));
+    const filtrados = professores.filter((u) => u.name.toLowerCase().includes(termo));
     mostrarLista(filtrados);
 }
 
 btnReset.onclick = () => {
     inputBuscar.value = "";
-    mostrarLista(usuarios);
+    mostrarLista(professores);
 }
 
 function mostrarDetalhes(u) {
