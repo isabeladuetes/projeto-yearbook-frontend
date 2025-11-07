@@ -1,6 +1,65 @@
+body {
+  font-family: "inria-serif";
+  background-color: #f8f9fa;
+  color: black;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #31487a;
+}
+
+input {
+  padding: 8px;
+  width: 250px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #31487a;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #31487a;
+}
+
 .professor {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 5px 0;
-    cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.professor:hover {
+  background-color: #eef2ff;
+}
+
+#detalhes {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+#detalhes h2 {
+  color: #31487a;
+}
+
+#voltar {
+  margin-top: 10px;
+  background-color: #888;
+}
+
+#voltar:hover {
+  background-color: #555;
 }
