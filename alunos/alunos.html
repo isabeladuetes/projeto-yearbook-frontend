@@ -3,18 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Painel de Alunos</title>
+    <title>Yearbook 2025 - Turmas</title>
     <link rel="stylesheet" href="alunos.css" />
     <script src="alunos.js" defer></script>
   </head>
   <body>
-    <h1>Painel de Alunos</h1>
+    <main>
+      <!-- NAVBAR -->
+      <header>
+        <div class="logo">
+          <img src="logo.png" alt="Bright Minds Academy" />
+          <span>Bright Minds Academy</span>
+        </div>
+        <h1>YEARBOOK 2025</h1>
+        <nav>
+          <a href="#">Abertura</a>
+          <a href="#">Turma</a>
+          <a href="#">Momentos</a>
+          <a href="#">Professores</a>
+          <a href="#">Prêmios</a>
+          <a href="#">Mensagens</a>
+          <a href="#">Final</a>
+        </nav>
+      </header>
 
-    <input id="inputBuscar" placeholder="Buscar aluno por nome..." />
-    <button id="btnBuscar">Buscar</button>
-    <button id="btnResetar">Resetar</button>
+      <h2>Turmas 2025</h2>
+      <p class="subtitulo">Nossos alunos, nossa história</p>
 
-    <div id="lista"></div>
-    <div id="detalhes"></div>
+      <div class="filtro">
+        <div class="busca">
+          <input id="inputBuscar" placeholder="Buscar aluno por nome..." />
+          <button id="btnBuscar">Pesquisar</button>
+          <button id="btnResetar">Resetar</button>
+        </div>
+
+        <select id="selectTurma">
+          <option value="todos">Todos</option>
+          <option value="3º A">3º A</option>
+          <option value="3º B">3º B</option>
+          <option value="3º C">3º C</option>
+          <option value="3º D">3º D</option>
+        </select>
+      </div>
+
+      <div id="lista" class="grade-alunos">
+        <div class="aluno">
+          <img src="aluno1.jpg" alt="Aluno 1" />
+          <h3>João Almeida</h3>
+        </div>
+        <div class="aluno">
+          <img src="aluna2.jpg" alt="Aluna 2" />
+          <h3>Marina Costa</h3>
+        </div>
+        <div class="aluno">
+          <img src="aluna3.jpg" alt="Aluna 3" />
+          <h3>Laura Nunes</h3>
+        </div>
+        <div class="aluno">
+          <img src="aluno4.jpg" alt="Aluno 4" />
+          <h3>Lucas Pereira</h3>
+        </div>
+      </div>
+    </main>
+
+    <footer>© 2025 Bright Minds Academy — Todos os direitos reservados.</footer>
   </body>
 </html>
