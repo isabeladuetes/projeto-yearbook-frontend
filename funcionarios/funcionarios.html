@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Professores</title>
     <link rel="stylesheet" href="funcionarios.css" />
-    <script src="funcionarios.js" defer></script>
-    <title>Professores</title>
-  </head>
-  <body>
-    <h1>Professores</h1>
-    <input id="inputBuscar" placeholder="Buscar professor...." />
-    <button id="btnBuscar">Buscar</button>
-    <button id="btnResetar">Resetar</button>
-    <div id="lista"></div>
-    <div id="detalhes"></div>
-  </body>
+</head>
+<body>
+
+    <header>
+        <h1>Lista de Professores</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="filtros">
+            <input type="text" id="inputBuscar" placeholder="Buscar professor...">
+            <select id="selectCargo">
+                <option value="todos">Todos os Cargos</option>
+                <option value="Professor">Professor</option>
+                <option value="Coordenador">Coordenador</option>
+                <option value="Diretor">Diretor</option>
+            </select>
+            <button id="btnBuscar">Buscar</button>
+            <button id="btnResetar">Resetar</button>
+        </div>
+
+        <div class="grade-professores" id="lista"></div>
+
+        <div id="detalhes"></div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Sistema Escolar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
