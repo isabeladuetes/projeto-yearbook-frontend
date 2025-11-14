@@ -3,65 +3,85 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Georgia", serif;
+  font-family: "Inria Serif", serif;
 }
 
-/* ======= TOP BAR ======= */
-.topbar {
+/* ======= BODY ======= */
+html, body {
+  height: 100%;
   width: 100%;
-  background: #0c2340;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inria Serif", serif;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+}
+
+/* ======= HEADER ======= */
+header {
+  background-color: #203763;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 30px;
+  padding: 10px 40px;
+  flex-wrap: wrap;
 }
 
-.logo-area {
+header .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo {
-  width: 55px;
+header .logo img {
+  width: 40px;
+  height: 40px;
 }
 
-.school-name {
-  font-size: 13px;
-  line-height: 1.1;
-}
-
-.yearbook-title {
+header h1 {
   font-size: 20px;
-  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
-.menu a {
-  margin-left: 18px;
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.menu a.active {
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header nav a.active {
   border-bottom: 2px solid white;
 }
 
-/* ======= MAIN CONTENT ======= */
-.content-area {
+/* ======= CONTEÚDO ======= */
+main {
   text-align: center;
-  padding: 40px 0 70px;
-  background: #f3f3f3;
+  padding: 40px 20px;
+  flex: 1;
 }
 
-h1 {
+main h2 {
   font-size: 36px;
-  margin-bottom: 10px;
+  color: #1a1a1a;
+  margin-bottom: 5px;
 }
 
-h3 {
-  color: #666;
+.subtitulo {
+  font-size: 18px;
+  color: #31487a;
+  border-bottom: 2px solid #31487a;
+  display: inline-block;
   margin-bottom: 30px;
 }
 
@@ -112,11 +132,33 @@ h3 {
   border-radius: 4px;
 }
 
-/* ======= FOOTER ======= */
-.footer {
-  background: #0c2340;
+/* ======= RODAPÉ ======= */
+footer {
+  background-color: #203763;
   color: white;
-  padding: 14px;
   text-align: center;
-  font-size: 13px;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  .medals {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
 }
