@@ -1,148 +1,225 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-  background-color: #0057b3; /* azul padrão */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: "Inria Serif", serif;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
 }
 
-/* Cabeçalho */
+/* Header */
 header {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  text-align: center;
+  background: linear-gradient(90deg, #1e2e4f 67.25%, #31487a 121.75%);
   color: white;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-  flex: 1;
-}
-
-/* Área de filtros */
-.filtros {
-  margin: 20px 0;
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
   flex-wrap: wrap;
 }
 
-.filtros input,
-.filtros select {
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  width: 180px;
-}
-
-.filtros button {
-  padding: 8px 15px;
-  border: none;
-  background-color: white;
-  color: #0057b3;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.filtros button:hover {
-  background-color: #d9e9ff;
-}
-
-/* Grade de cards */
-.grade-professores {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+header .logo {
+  display: flex;
+  align-items: center;
   gap: 15px;
-  padding-bottom: 30px;
 }
 
-.professor-card {
-  background-color: white;
+header .logo img {
+  height: 60px;
+}
+
+header .textos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+header .barra {
+  width: 2px;
+  height: 30px;
+  background: white;
+}
+
+header .ano {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ====== CONTEÚDO ====== */
+main {
   text-align: center;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.professor-card:hover {
-  transform: scale(1.05);
-  background-color: #e8f1ff;
+main h2 {
+  font-size: 50px;
+  color: #1e2e4f;
+  margin-bottom: 5px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Foto fake */
-.foto-fake {
-  width: 80px;
-  height: 80px;
-  background-color: #87b9ff;
-  border-radius: 50%;
-  margin: 0 auto 10px auto;
+.subtitulo {
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
 }
 
-/* Tela de detalhes */
-#detalhes {
-  display: none;
-  background-color: white;
-  padding: 25px;
-  border-radius: 10px;
-  margin-top: 20px;
+/* ====== FILTROS ====== */
+.filtro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-#detalhes h2 {
-  margin-bottom: 10px;
-  color: #0057b3;
+.filtro input {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#detalhes p {
-  margin: 5px 0;
-  color: #00366f;
-}
-
-#voltar {
-  margin-top: 15px;
-  padding: 8px 15px;
-  background-color: #0057b3;
+.filtro button {
+  padding: 8px 14px;
+  background-color: #31487a;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-#voltar:hover {
-  background-color: #003f80;
+.filtro select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* Rodapé */
+/* ====== ALUNOS ====== */
+.grade-alunos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.aluno {
+  background: white;
+  border: 1px solid #d0d4e0;
+  border-radius: 8px;
+  width: 220px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aluno:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.aluno img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.aluno h3 {
+  color: #203763;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ====== RODAPÉ ====== */
 footer {
-  background-color: rgba(255, 255, 255, 0.15);
-  text-align: center;
-  padding: 10px;
+  background-color: #203763;
   color: white;
-  margin-top: auto;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: 60px;
 }
 
-/* ✅ Responsividade */
-@media (max-width: 600px) {
-  .filtros {
+.foto-fake {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e3f0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.detalhes-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .search-container {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 10px;
   }
 
-  .filtros input,
-  .filtros select,
-  .filtros button {
+  /*seleciona vários elementos ao mesmo tempo*/
+  .search-container input,
+  .search-container select,
+  .search-container button {
+    width: 100%;
+  }
+
+  .aluno-card {
     width: 90%;
+    margin: 10px auto;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+  footer {
+    background: #1e2e4f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   }
 }
-
-
