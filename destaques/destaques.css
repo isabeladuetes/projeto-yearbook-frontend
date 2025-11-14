@@ -1,0 +1,122 @@
+/* ======= RESET ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+/* ======= TOP BAR ======= */
+.topbar {
+  width: 100%;
+  background: #0c2340;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 55px;
+}
+
+.school-name {
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.yearbook-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu a {
+  margin-left: 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu a.active {
+  border-bottom: 2px solid white;
+}
+
+/* ======= MAIN CONTENT ======= */
+.content-area {
+  text-align: center;
+  padding: 40px 0 70px;
+  background: #f3f3f3;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ======= MEDALS ======= */
+.medals {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.medal {
+  width: 60px;
+  height: 60px;
+  background: #12284a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medal-icon {
+  font-size: 32px;
+}
+
+/* ======= AWARD CARDS ======= */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+.award-card {
+  width: 220px;
+  height: 260px;
+  border: 2px solid #102542;
+  border-radius: 8px;
+  background: white;
+  position: relative;
+}
+
+.award-card::before {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px dashed #bbb;
+  border-radius: 4px;
+}
+
+/* ======= FOOTER ======= */
+.footer {
+  background: #0c2340;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+}
