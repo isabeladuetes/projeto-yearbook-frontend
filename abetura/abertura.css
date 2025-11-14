@@ -84,7 +84,7 @@ header nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .texto {
@@ -128,7 +128,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
 }
