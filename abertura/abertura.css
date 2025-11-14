@@ -1,17 +1,14 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos principais */
 body {
   font-family: "Inria Serif";
   background: #F3F3F3;
 }
 
-/* Header */
 header {
   background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
   color: white;
@@ -87,7 +84,7 @@ header nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .texto {
@@ -131,12 +128,12 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
 }
 
-/* Tablets */
+/* Responsividade */
 @media (max-width: 900px) {
   .introducao {
     flex-direction: column;
@@ -157,7 +154,6 @@ footer {
   }
 }
 
-/* Celulares */
 @media (max-width: 600px) {
 
   header {
@@ -204,7 +200,6 @@ footer {
   }
 }
 
-/* Celulares muito pequenos */
 @media (max-width: 400px) {
   .mensagem {
     padding: 30px 20px;
