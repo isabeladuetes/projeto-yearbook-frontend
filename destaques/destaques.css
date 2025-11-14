@@ -1,0 +1,169 @@
+
+/* ======= BODY ======= */
+  body {
+    font-family: "Inria Serif";
+    background: #F3F3F3;
+  }
+
+/* ======= HEADER ======= */
+header {
+  background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header .textos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+header .barra {
+  width: 2px;
+  height: 30px;
+  background: white;
+}
+
+header .ano {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+header h1 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* ======= CONTEÚDO ======= */
+main {
+  text-align: center;
+}
+
+main h2 {
+  font-size: 50px;
+  color: #1E2E4F;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subtitulo {
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
+}
+
+/* ======= MEDALS ======= */
+.medals {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.medal {
+  width: 60px;
+  height: 60px;
+  background: #12284a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medal-icon {
+  font-size: 32px;
+}
+
+/* ======= AWARD CARDS ======= */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+.award-card {
+  width: 220px;
+  height: 260px;
+  border: 2px solid #102542;
+  border-radius: 8px;
+  background: white;
+  position: relative;
+}
+
+.award-card::before {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px dashed #bbb;
+  border-radius: 4px;
+}
+
+/* ======= RODAPÉ ======= */
+footer {
+  background: #1E2E4F;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  .medals {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  footer {
+    background: #1E2E4F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
