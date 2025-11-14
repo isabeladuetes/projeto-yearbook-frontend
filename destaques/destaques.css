@@ -1,25 +1,13 @@
-/* ======= RESET ======= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inria Serif", serif;
-}
 
 /* ======= BODY ======= */
-html, body {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-family: "Inria Serif", serif;
-  background-color: #f8f9fa;
-  color: #1a1a1a;
-}
+  body {
+    font-family: "Inria Serif";
+    background: #F3F3F3;
+  }
 
 /* ======= HEADER ======= */
 header {
-  background-color: #203763;
+  background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -31,12 +19,29 @@ header {
 header .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 header .logo img {
-  width: 40px;
-  height: 40px;
+  height: 60px;
+}
+
+header .textos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+header .barra {
+  width: 2px;
+  height: 30px;
+  background: white;
+}
+
+header .ano {
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 header h1 {
@@ -60,29 +65,22 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-header nav a.active {
-  border-bottom: 2px solid white;
-}
 
 /* ======= CONTEÚDO ======= */
 main {
   text-align: center;
-  padding: 40px 20px;
-  flex: 1;
 }
 
 main h2 {
-  font-size: 36px;
-  color: #1a1a1a;
-  margin-bottom: 5px;
+  font-size: 50px;
+  color: #1E2E4F;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .subtitulo {
-  font-size: 18px;
-  color: #31487a;
-  border-bottom: 2px solid #31487a;
-  display: inline-block;
-  margin-bottom: 30px;
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
 }
 
 /* ======= MEDALS ======= */
@@ -134,11 +132,13 @@ main h2 {
 
 /* ======= RODAPÉ ======= */
 footer {
-  background-color: #203763;
+  background: #1E2E4F;
   color: white;
   text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 /* ======= RESPONSIVIDADE ======= */
@@ -158,7 +158,12 @@ footer {
   }
 
   footer {
+    background: #1E2E4F;
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   }
 }
