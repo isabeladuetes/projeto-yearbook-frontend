@@ -1,0 +1,220 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos principais */
+body {
+  font-family: "Inria Serif";
+  background: #F3F3F3;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header .textos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+header .barra {
+  width: 2px;
+  height: 30px;
+  background: white;
+}
+
+header .ano {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section: Abertura */
+.mensagem {
+  padding: 50px;
+  text-align: center;
+}
+
+.mensagem h1 {
+  font-size: 50px;
+  color: #1E2E4F;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mensagem p {
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
+}
+
+.introducao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.texto {
+  width: 45%;
+  text-align: left;
+  font-size: 18px;
+  color: #000;
+}
+
+.texto h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #31487A;
+}
+
+.imagens {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-box {
+  width: 49%;
+  height: 300px;
+  object-fit: cover;
+  border: 5px solid #31487A;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.image-box:hover {
+  transform: scale(1.03);
+  box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer */
+footer {
+  background: #1E2E4F;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .introducao {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .texto, .imagens {
+    width: 100%;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+  header {
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+  }
+
+  header .logo {
+    flex-direction: column;
+  }
+
+  header .textos {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  header .barra {
+    display: none;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .mensagem h1 {
+    font-size: 35px;
+  }
+
+  .mensagem p {
+    font-size: 18px;
+  }
+
+  .imagens {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-box {
+    width: 100%;
+    height: 230px;
+  }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 400px) {
+  .mensagem {
+    padding: 30px 20px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+
+  .texto {
+    font-size: 16px;
+  }
+}
