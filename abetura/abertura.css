@@ -125,7 +125,6 @@ header nav a:hover {
   box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.35);
 }
 
-
 /* Footer */
 footer {
   background: #1E2E4F;
@@ -135,4 +134,87 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .introducao {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .texto, .imagens {
+    width: 100%;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+  header {
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+  }
+
+  header .logo {
+    flex-direction: column;
+  }
+
+  header .textos {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  header .barra {
+    display: none;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .mensagem h1 {
+    font-size: 35px;
+  }
+
+  .mensagem p {
+    font-size: 18px;
+  }
+
+  .imagens {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-box {
+    width: 100%;
+    height: 230px;
+  }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 400px) {
+  .mensagem {
+    padding: 30px 20px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+
+  .texto {
+    font-size: 16px;
+  }
 }
