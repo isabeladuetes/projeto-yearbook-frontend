@@ -1,0 +1,171 @@
+/* ===== RESET E FUNDO 100% AZUL ===== */
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: #0F2140; /* fundo azul que cobre a tela inteira */
+  font-family: "Georgia", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== SITE WRAPPER (centraliza o conteúdo se quiser largura máxima) ===== */
+.page-bg {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centraliza o 'site' */
+  align-items: stretch;
+  padding: 40px 0; /* espaço superior/inferior; se quiser sem, deixar 0 */
+}
+
+/* largura do layout principal (ajuste se quiser maior/menor) */
+.site {
+  display: flex;
+  width: calc(100% - 160px); /* deixa margem lateral azul igual ao screenshot */
+  max-width: 1400px;         /* limite para telas muito largas */
+  min-height: calc(100vh - 80px);
+  background: transparent; /* corpo já azul */
+}
+
+/* ===== LEFT COLUMN ===== */
+.left-section {
+  width: 360px; /* largura fixa para a coluna esquerda */
+  background: #14264A;    /* azul escuro da coluna */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  flex-shrink: 0;
+}
+
+/* logo e texto */
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.logo {
+  width: 78px;
+  height: 78px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.02);
+}
+
+/* moeda de linhas do nome */
+.logo-text .lm {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+/* botão na parte inferior da coluna */
+.bottom {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.start-btn {
+  background: #23426A;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 8px 18px rgba(3,12,30,0.35);
+  cursor: pointer;
+}
+
+/* ===== RIGHT SECTION ===== */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  position: relative;
+}
+
+/* imagem superior */
+.image-wrapper {
+  width: 100%;
+  height: 48vh; /* ocupa quase metade da altura em desktop */
+  min-height: 260px;
+  overflow: hidden;
+  background: #0F2140;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%); /* deixa como na imagem */
+  display: block;
+}
+
+/* faixa de título abaixo da imagem */
+.title-band {
+  background: #14264A; /* faixa escura que contém o título */
+  padding: 56px 60px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: inset 0 40px 0 rgba(10,24,44,0.06); /* leve profundidade */
+}
+
+/* títulos */
+.title {
+  font-size: 64px;
+  line-height: 0.95;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.title span { font-weight: 700; }
+
+.subtitle {
+  margin: 0;
+  font-size: 22px;
+  color: #7e97b6;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* ===== REMOVENDO QUALQUER BORDA/FAKE MARGEM EM TELA PEQUENA ===== */
+@media (max-width: 1400px) {
+  .site { width: 100%; padding: 0 40px; max-width: none; }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* tablets */
+@media (max-width: 992px) {
+  .page-bg { padding: 24px 0; }
+  .site { flex-direction: column; width: calc(100% - 48px); }
+  .left-section { width: 100%; padding: 20px; display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+  .logo-text { display: none; } /* esconde texto do logo em telas médias */
+  .image-wrapper { height: 320px; }
+  .title-band { padding: 36px 28px; text-align: center; }
+  .title { font-size: 40px; }
+  .subtitle { font-size: 16px; }
+}
+
+/* celulares */
+@media (max-width: 600px) {
+  .page-bg { padding: 12px 0; }
+  .left-section { padding: 16px; }
+  .logo { width: 56px; height: 56px; }
+  .start-btn { padding: 12px 18px; font-size: 16px; }
+  .image-wrapper { height: 220px; }
+  .title-band { padding: 24px 18px; }
+  .title { font-size: 28px; }
+  .subtitle { font-size: 14px; letter-spacing: 1px; }
+}
