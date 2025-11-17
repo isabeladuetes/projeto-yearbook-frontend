@@ -1,4 +1,4 @@
-// Seleciona os elementos principais
+'// Seleciona os elementos principais
 const lista = document.querySelector(".grade-alunos"); // grade dos cards
 const inputBuscar = document.getElementById("inputBuscar");
 const btnBuscar = document.getElementById("btnBuscar");

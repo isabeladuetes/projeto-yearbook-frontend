@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inria Serif";
+  background: #f3f3f3;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #1e2e4f 67.25%, #31487a 121.75%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header .textos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+header .barra {
+  width: 2px;
+  height: 30px;
+  background: white;
+}
+
+header .ano {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section: Encerramento */
+.mensagem {
+  padding: 50px;
+  text-align: center;
+}
+
+.mensagem h1 {
+  font-size: 50px;
+  color: #1e2e4f;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mensagem p {
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
+}
+
+.introducao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.texto {
+  max-width: 700px;
+  margin: auto;
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.frase {
+  margin-top: 50px;
+  color: #1e2e4f;
+}
+
+.linha {
+  width: 250px;
+  height: 3px;
+  background: #1e2e4f;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+button {
+  background: #1e2e4f;
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #31487a;
+}
+
+/* Footer */
+footer {
+  background: #1e2e4f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  header {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo img {
+    height: 50px;
+  }
+
+  header .textos {
+    font-size: 18px;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+
+  .mensagem h1 {
+    font-size: 35px;
+  }
+
+  .mensagem p {
+    font-size: 20px;
+  }
+
+  .introducao {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .texto {
+    max-width: 90%;
+    font-size: 18px;
+  }
+
+  .botoes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 10px 30px;
+  }
+
+  header .logo img {
+    height: 55px;
+  }
+
+  header .textos {
+    font-size: 19px;
+  }
+
+  header nav {
+    gap: 15px;
+  }
+
+  .mensagem h1 {
+    font-size: 45px;
+  }
+
+  .mensagem p {
+    font-size: 22px;
+  }
+
+  .texto {
+    max-width: 80%;
+    font-size: 20px;
+  }
+
+  .botoes {
+    gap: 25px;
+  }
+
+  button {
+    padding: 14px 32px;
+    font-size: 17px;
+  }
+}
