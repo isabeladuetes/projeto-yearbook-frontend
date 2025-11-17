@@ -5,7 +5,7 @@ body {
   color: #1a1a1a;
 }
 
-/* ====== HEADER ====== */
+/* HEADER */
 header {
   background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
   color: white;
@@ -65,7 +65,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* ====== CONTEÚDO ====== */
+/* CONTEÚDO */
 main {
   text-align: center;
 
