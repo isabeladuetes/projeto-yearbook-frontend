@@ -124,11 +124,11 @@ header nav a:hover {
 
 /* Footer */
 footer {
-  background: #1E2E4F;
+  background: #1e2e4f;
   color: white;
   text-align: center;
   padding: 20px;
-  position: relative;
+  position: fixed;
   width: 100%;
   bottom: 0;
 }
