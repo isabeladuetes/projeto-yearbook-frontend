@@ -1,4 +1,4 @@
-'// Seleciona os elementos principais
+// Seleciona os elementos principais
 const lista = document.querySelector(".grade-alunos"); // grade dos cards
 const inputBuscar = document.getElementById("inputBuscar");
 const btnBuscar = document.getElementById("btnBuscar");
@@ -15,7 +15,7 @@ detalhes.style.display = "none";
 let alunos = [];
 
 // ⚙️ CONFIGURAÇÃO DA API
-const IP_DO_BACKEND = "10.88.200.157";
+const IP_DO_BACKEND = "10.88.199.143";
 const PORTA = 3001; // A porta do seu server.js
 const URL_BASE_API = `http://${IP_DO_BACKEND}:${PORTA}`;
 // Fim da Configuração
@@ -33,6 +33,7 @@ async function buscarAlunosDaAPI() {
 
     // ...
     const data = await resposta.json();
+    console.log(data);
 
     // ⬇️ Mude esta linha
     if (!Array.isArray(data.alunos)) {
@@ -100,12 +101,8 @@ function mostrarDetalhes(aluno) {
 
   detalhes.innerHTML = `
     <div class="detalhes-card">
-        <h2>${a.nome}</h2>
-        <img class="foto-detalhe" src="${urlFoto}" alt="Foto de ${a.nome}">
-        <p><strong>Ano:</strong> ${a.ano}</p>
-        <p><strong>Idade:</strong> ${a.idade} anos</p>
-        <p><strong>Email:</strong> ${a.email}</p>
-        <p><strong>Turma:</strong> ${a.turma}</p>
+        <h2>${aluno.nome}</h2>
+        <img class="foto-detalhe" src="${urlFoto}" alt="Foto de ${aluno.nome}">
         <button id="voltar">Voltar</button>
     </div>
   `;
@@ -152,10 +149,7 @@ function mostrarDetalhes(a) {
     <div class="detalhes-card">
         <h2>${a.nome}</h2>
         <img class="foto-detalhe" src="${a.foto}" alt="Foto de ${a.nome}">
-        <p><strong>Ano:</strong> ${a.ano}</p>
-        <p><strong>Idade:</strong> ${a.idade} anos</p>
         <p><strong>Email:</strong> ${a.email}</p>
-        <p><strong>Turma:</strong> ${a.turma}</p>
         <button id="voltar">Voltar</button>
     </div>
   `;
@@ -178,3 +172,4 @@ buscarAlunosDaAPI();
 window.addEventListener("resize", () => {
   document.body.style.minHeight = window.innerHeight + "px";
 });
+
