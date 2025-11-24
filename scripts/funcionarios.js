@@ -1,113 +1,169 @@
-// Arquivo: funcionarios.js (Linhas 2 a 5)
+// Arquivo: funcionarios.js
 
-// Antes: const lista = document.querySelector(".grade-funcionarios"); // OK após a correção do HTML
+// 1. FUNÇÃO DE UTILIDADE PARA NORMALIZAÇÃO (NOVO)
+// Remove acentos e caracteres especiais, e converte para minúsculas.
+function normalizarString(str) {
+  if (!str) return '';
+  // .normalize("NFD") separa os acentos (e.g., 'á' vira 'a' + '´').
+  // .replace() remove os códigos de acento (os combinantes Unicode).
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+// 2. ACESSO AO DOM E VARIÁVEIS DE ESTADO
+const mainElement = document.querySelector("main");
+const lista = document.getElementById("lista"); 
 const inputBuscar = document.getElementById("inputBuscar");
 const btnBuscar = document.getElementById("btnBuscar");
 const btnReset = document.getElementById("btnResetar");
-// Antes: const selectSetor = document.getElementById("selectSetor"); // ESTE ID NÃO EXISTE NO HTML
-// Correção: Use o ID real que está no HTML
-const selectSetor = document.getElementById("selectTurma"); // CORRIGIDO PARA selectTurma
+const selectSetor = document.getElementById("selectTurma"); 
 
 let funcionarios = [];
-// Função para buscar dados dos funcionários na API
+let htmlInicialMain = ""; // Variável para salvar o estado inicial da página (usado para o botão "Voltar")
+
+const FOTO_PADRAO = "https://i.ibb.co/8gkc15cn/foto-de-anurio-de-um-funcionrio-da-escola-o-indivduo-tem-entre-30-e-40-anos-a-foto-um-retrato-de-b-5.png"; 
+
+// 3. FUNÇÃO DE RESTAURAÇÃO DE TELA
+function restaurarLista() {
+  // Restaura o HTML de filtros e lista
+  mainElement.innerHTML = htmlInicialMain;
+  
+  // É essencial reatribuir os listeners após reescrever o DOM
+  document.getElementById("btnBuscar").onclick = () => filtrar();
+  document.getElementById("btnResetar").onclick = () => {
+      document.getElementById("inputBuscar").value = "";
+      document.getElementById("selectTurma").value = "todos";
+      mostrarLista(funcionarios);
+  };
+  document.getElementById("selectTurma").onchange = () => filtrar();
+  
+  // Repopula o grid com os dados atuais
+  mostrarLista(funcionarios);
+}
+
+// 4. FUNÇÃO PARA BUSCAR DADOS DA API
 async function buscarFuncionariosDaAPI() {
-  lista.innerHTML = `<p>Carregando dados dos funcionários...</p>`;
+  // Salva o HTML inicial do <main> na primeira execução
+  if (htmlInicialMain === "") {
+      htmlInicialMain = mainElement.innerHTML;
+      lista.innerHTML = `<p>Carregando dados dos funcionários...</p>`;
+  }
   
   try {
-    const resposta = await fetch("http://10.88.199.137:3001/funcionarios");
+      const resposta = await fetch("http://10.88.199.137:3001/funcionarios");
 
-    if (!resposta.ok) {
-      throw new Error(`Erro HTTP: ${resposta.status} - ${resposta.statusText}`);
-    }
+      if (!resposta.ok) {
+          throw new Error(`Erro HTTP: ${resposta.status} - ${resposta.statusText}`);
+      }
 
-    const data = await resposta.json();
-    funcionarios = data.funcionarios;  // Armazena os dados dos funcionários
-    mostrarLista(funcionarios);
+      const data = await resposta.json();
+      funcionarios = data.funcionarios || [];
+      
+      // Se a lista estiver na tela, mostra os dados
+      if (mainElement.querySelector('#lista')) {
+           mostrarLista(funcionarios);
+      }
+     
   } catch (error) {
-    console.error("Erro ao buscar dados da API:", error);
-    lista.innerHTML = `<p style="color: red;">❌ Erro ao carregar dados. Verifique o IP, a conexão com o servidor e o console.</p>`;
+      console.error("Erro ao buscar dados da API:", error);
+      if (mainElement.querySelector('#lista')) {
+          lista.innerHTML = `<p style="color: red;">❌ Erro ao carregar dados. Verifique o IP, a conexão com o servidor e o console.</p>`;
+      }
   }
 }
 
-// Função para exibir a lista de funcionários
+// 5. FUNÇÃO PARA EXIBIR A LISTA
 function mostrarLista(array) {
-  lista.innerHTML = "";
+  const listaContainer = document.getElementById("lista");
+  if (!listaContainer) return;
 
+  listaContainer.innerHTML = "";
+  
   if (array.length === 0) {
-    lista.innerHTML = "<p>Nenhum funcionário encontrado.</p>";
-    return;
+      listaContainer.innerHTML = "<p>Nenhum funcionário encontrado.</p>";
+      return;
   }
 
   array.forEach((funcionario) => {
-    const card = document.createElement("div");
-    card.className = "funcionario";
+      const card = document.createElement("div");
+      card.className = "funcionario";
+      const urlFoto = (funcionario.fotos && funcionario.fotos.length > 0) ? funcionario.fotos[0].url : FOTO_PADRAO;
 
-    // Verificando se o funcionário tem fotos e usando uma foto padrão se necessário
-    const temFotos = funcionario.fotos && funcionario.fotos.length > 0;
-    const urlFoto = temFotos
-      ? funcionario.fotos[0].url
-      : "https://i.ibb.co/8gkc15cn/foto-de-anurio-de-um-funcionrio-da-escola-o-indivduo-tem-entre-30-e-40-anos-a-foto-um-retrato-de-b-5.png";  // Foto padrão
+      card.innerHTML = `
+          <img class="foto" src="${urlFoto}" alt="Foto de ${funcionario.nome}">
+          <h3>${funcionario.nome}</h3>
+          <p>${funcionario.cargo}</p>
+      `;
 
-    card.innerHTML = `
-      <img class="foto" src="${urlFoto}" alt="Foto de ${funcionario.nome}">
-      <h3>${funcionario.nome}</h3>
-      <p>${funcionario.cargo}</p>
-    `;
-
-    // Ao clicar, exibe os detalhes do funcionário
-    card.onclick = () => mostrarDetalhes(funcionario);
-    lista.appendChild(card);
+      card.onclick = () => mostrarDetalhes(funcionario);
+      listaContainer.appendChild(card);
   });
 }
 
-// Função para mostrar os detalhes do funcionário
+// 6. FUNÇÃO PARA MOSTRAR DETALHES (Oculta a lista)
 function mostrarDetalhes(funcionario) {
-  const urlFoto = funcionario.fotos && funcionario.fotos.length > 0
-    ? funcionario.fotos[0].url
-    : "https://i.ibb.co/8gkc15cn/foto-de-anurio-de-um-funcionrio-da-escola-o-indivduo-tem-entre-30-e-40-anos-a-foto-um-retrato-de-b-5.png";
+  const urlFoto = (funcionario.fotos && funcionario.fotos.length > 0)
+      ? funcionario.fotos[0].url
+      : FOTO_PADRAO;
 
-  const detalhes = document.createElement("div");
-  detalhes.innerHTML = `
-    <div class="detalhes-card">
-        <h2>${funcionario.nome}</h2>
-        <img class="foto-detalhe" src="${urlFoto}" alt="Foto de ${funcionario.nome}">
-        <p><strong>Cargo:</strong> ${funcionario.cargo}</p>
-        <p><strong>Email:</strong> ${funcionario.email}</p>
-        <button id="voltar">Voltar</button>
-    </div>
+  const detalhesHTML = `
+      <div id="detalhesFuncionario" class="detalhes-card">
+          <h2>${funcionario.nome}</h2>
+          <img class="foto-detalhe" src="${urlFoto}" alt="Foto de ${funcionario.nome}">
+          <p><strong>Cargo:</strong> ${funcionario.cargo}</p>
+          <p><strong>Email:</strong> ${funcionario.email}</p>
+          <button id="voltar">Voltar à Lista</button>
+      </div>
   `;
 
-  document.body.appendChild(detalhes);
+  // Substitui todo o conteúdo do <main>
+  mainElement.innerHTML = detalhesHTML;
   
+  // Atribui o evento "Voltar"
   document.getElementById("voltar").onclick = () => {
-    detalhes.style.display = "none";
-    lista.style.display = "grid";
+      restaurarLista(); 
   };
 }
 
-// Função de filtro
-btnBuscar.onclick = () => filtrar();
 
+// 7. FUNÇÃO DE FILTRAGEM (CORRIGIDA)
+function filtrar() {
+  // ⚠️ Usa normalização para a busca de nome
+  const termoNormalizado = normalizarString(inputBuscar.value);
+  const setorSelecionado = selectSetor.value; // 'todos', 'Professor', 'coordenador', 'Diretor'
+
+  let filtrados = funcionarios.filter((f) => {
+      // Normaliza o nome do funcionário para comparação
+      const nomeNormalizado = normalizarString(f.nome);
+      
+      // 1. Filtro por nome: O nome deve incluir o termo digitado
+      const passaNoNome = nomeNormalizado.includes(termoNormalizado);
+
+      if (setorSelecionado === "todos") {
+          return passaNoNome;
+      } else {
+          // 2. Filtro por setor: O cargo deve INCLUIR o valor selecionado
+          // Ex: Se setorSelecionado="Professor" e o cargo for "Professora de História", funciona.
+          const cargoNormalizado = normalizarString(f.cargo);
+          const setorNormalizado = normalizarString(setorSelecionado);
+
+          const passaNoSetor = cargoNormalizado.includes(setorNormalizado);
+
+          // Retorna apenas se passar no nome E passar no setor
+          return passaNoNome && passaNoSetor; 
+      }
+  });
+
+  mostrarLista(filtrados);
+}
+
+// 8. LISTENERS INICIAIS
+btnBuscar.onclick = () => filtrar();
 btnReset.onclick = () => {
   inputBuscar.value = "";
   selectSetor.value = "todos";
   mostrarLista(funcionarios);
 };
-
 selectSetor.onchange = () => filtrar();
 
-function filtrar() {
-  const termo = inputBuscar.value.toLowerCase();
-  const setorSelecionado = selectSetor.value;
-
-  let filtrados = funcionarios.filter((f) => f.nome.toLowerCase().includes(termo));
-
-  if (setorSelecionado !== "todos") {
-    filtrados = filtrados.filter((f) => f.cargo === setorSelecionado);
-  }
-
-  mostrarLista(filtrados);
-}
-
-// Inicializa a aplicação buscando os dados da API
+// 9. INICIALIZAÇÃO
 buscarFuncionariosDaAPI();
