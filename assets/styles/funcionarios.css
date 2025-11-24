@@ -1,0 +1,201 @@
+body {
+  font-family: "Inria Serif", serif;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ====== HEADER ====== */
+header {
+  background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px ;
+  text-align: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header .textos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+header .barra {
+  width: 2px;
+  height: 30px;
+  background: white;
+  
+}
+
+header .ano {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ====== CONTEÚDO PRINCIPAL (Main) ====== */
+main {
+  flex: 1; /* Permite que o conteúdo principal cresça */
+  text-align: center;
+}
+
+main h2 {
+  font-size: 50px;
+  color: #1E2E4F;
+  margin-bottom: 5px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subtitulo {
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
+}
+
+/* ====== FILTROS ====== */
+.filtro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filtro input, .filtro select {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filtro button {
+  padding: 8px 14px;
+  background-color: #31487a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ====== FUNCIONÁRIOS GRID ====== */
+.grade-funcionarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.funcionario {
+  background: white;
+  border: 1px solid #d0d4e0;
+  border-radius: 8px;
+  width: 220px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.funcionario:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.funcionario img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.funcionario h3 {
+  color: #203763;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ====== CARD DE DETALHES (Estilo para o conteúdo injetado) ====== */
+.detalhes-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.detalhes-card .foto-detalhe {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #31487a;
+}
+
+.detalhes-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #31487a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.detalhes-card button:hover {
+    background-color: #2a3c5a;
+}
+
+/* ====== RODAPÉ ====== */
+footer {
+  background-color: #203763;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: auto; /* Garante que o footer fique no final */
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 768px) {
+  /* ... (Responsividade do seu código original) ... */
+  /* Removi o 'position: fixed' do footer, pois causava conflito com o body flex */
+}
