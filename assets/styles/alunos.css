@@ -1,230 +1,218 @@
+/* Arquivo: alunos.css */
+
+/* Definição de Cores e Fontes */
+:root {
+  --cor-principal: #1E2E4F;
+  --cor-secundaria: #31487A;
+  --cor-destaque: #203763;
+}
+
+/* Base e Layout Estrutural */
 body {
-  font-family: "Inria Serif", serif;
-  margin: 0;
-  background-color: #f8f9fa;
-  color: #1a1a1a;
+    font-family: "Inria Serif", serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* HEADER */
-header {
-  background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  flex-wrap: wrap;
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-header .logo img {
-  height: 60px;
-}
-
-header .textos {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 20px;
-}
-
-header .barra {
-  width: 2px;
-  height: 30px;
-  background: white;
-}
-
-header .ano {
-  font-size: 22px;
-  letter-spacing: 1px;
-}
-
-header h1 {
-  font-size: 50px;
-  color: #1E2E4F;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-header nav {
-  display: flex;
-  gap: 20px;
-}
-
-header nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* CONTEÚDO */
 main {
-  text-align: center;
-
+    flex: 1; 
+    text-align: center;
+    padding-bottom: 40px; 
 }
 
-main h2 {
-  font-size: 50px;
-  color:#1E2E4F;
-  margin-bottom: 5px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+/* ====== HEADER / NAVBAR ====== */
+header {
+    background: linear-gradient(90deg, var(--cor-principal) 67.25%, var(--cor-secundaria) 121.75%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+}
 
+header .logo { display: flex; align-items: center; gap: 15px; }
+header .logo img { height: 60px; }
+header .textos { display: flex; align-items: center; gap: 15px; font-size: 20px; }
+header .barra { width: 2px; height: 30px; background: white; }
+header .ano { font-size: 22px; letter-spacing: 1px; }
+header nav { display: flex; gap: 20px; }
+header nav a { color: white; text-decoration: none; font-size: 15px; }
+header nav a:hover { text-decoration: underline; }
+
+
+/* Títulos */
+main h2 {
+    font-size: 50px;
+    color: var(--cor-principal);
+    margin-bottom: 5px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .subtitulo {
-  font-size: 25px;
-  color: #000;
-  margin-top: 5px;
+    font-size: 25px;
+    color: #000;
+    margin-top: 5px;
 }
 
 /* ====== FILTROS ====== */
 .filtro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
-.filtro input {
-  padding: 8px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.filtro input, .filtro select {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .filtro button {
-  padding: 8px 14px;
-  background-color: #31487a;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 8px 14px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.filtro select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.filtro button:hover {
+    background-color: #2a3c5a;
 }
 
-/* ====== ALUNOS ====== */
+/* ====== LISTA DE ALUNOS (Grid) ====== */
 .grade-alunos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 0 20px;
 }
 
 .aluno {
-  background: white;
-  border: 1px solid #d0d4e0;
-  border-radius: 8px;
-  width: 220px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    border: 1px solid #d0d4e0;
+    border-radius: 8px;
+    width: 220px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-align: center;
 }
 
 .aluno:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .aluno img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .aluno h3 {
-  color: #203763;
-  font-size: 18px;
-  margin: 0;
+    color: var(--cor-destaque);
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+.aluno p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ====== CARD DE DETALHES (Injetado pelo JS) ====== */
+.detalhes-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 450px;
+    margin: 60px auto; 
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.detalhes-card .foto-detalhe {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--cor-secundaria);
+}
+
+.detalhes-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.detalhes-card button:hover {
+    background-color: #2a3c5a;
 }
 
 /* ====== RODAPÉ ====== */
 footer {
-  background-color: #203763;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
-  margin-top: 60px;
-}
-
-.foto-fake {
-  width: 100%;
-  height: 200px;
-  background-color: #e0e3f0;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-.detalhes-card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .search-container input,
-  .search-container select,
-  .search-container button {
-    width: 100%;
-  }
-
-  .aluno-card {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  footer {
-    background: #1e2e4f;
+    background-color: var(--cor-destaque);
     color: white;
     text-align: center;
-    padding: 20px;
-    position: fixed;
+    padding: 15px 0;
+    font-size: 14px;
     width: 100%;
-    bottom: 0;
-  }
+    margin-top: auto; 
+}
+
+/* ====== MEDIA QUERIES (Responsividade) ====== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    header nav {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    .filtro {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filtro input,
+    .filtro select,
+    .filtro .busca button {
+        width: 80%; 
+    }
+    
+    .aluno {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
+    }
+    
+    footer {
+        padding: 15px;
+    }
 }
