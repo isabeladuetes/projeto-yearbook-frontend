@@ -11,7 +11,7 @@ detalhes.style.display = "none";
 
 let alunos = [];
 
-const IP_DO_BACKEND = "10.88.199.143";
+const IP_DO_BACKEND = "10.88.199.137";
 const PORTA = 3001;
 const URL_BASE_API = `http://${IP_DO_BACKEND}:${PORTA}`;
 

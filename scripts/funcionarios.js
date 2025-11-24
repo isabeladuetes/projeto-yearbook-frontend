@@ -14,7 +14,7 @@ async function buscarFuncionariosDaAPI() {
   lista.innerHTML = `<p>Carregando dados dos funcionários...</p>`;
   
   try {
-    const resposta = await fetch("http://10.88.199.143:3001/funcionarios");
+    const resposta = await fetch("http://10.88.199.137:3001/funcionarios");
 
     if (!resposta.ok) {
       throw new Error(`Erro HTTP: ${resposta.status} - ${resposta.statusText}`);
