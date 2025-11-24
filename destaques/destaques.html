@@ -11,29 +11,28 @@
     <main>
       <!-- NAVBAR -->
       <header>
-        <div class="logo">
-            <img src="../assets/styles/img/logo.png" alt="Bright Minds Academy" />
-            <div class="textos">
-                <span class="escola">Bright Minds Academy</span>
-                <span class="barra"></span>
-                <span class="ano">YEARBOOK 2025</span>
-            </div>
+      <div class="logo">
+        <img src="../img/logo.png" alt="Bright Minds Academy" />
+        <div class="textos">
+          <span class="escola">Bright Minds Academy</span>
+          <span class="barra"></span>
+          <span class="ano">YEARBOOK 2025</span>
         </div>
-    
-        <nav>
-            <a href="#">Abertura</a>
-            <a href="#">Turma</a>
-            <a href="#">Momentos</a>
-            <a href="#">Professores</a>
-            <a href="#">Prêmios</a>
-            <a href="#">Mensagens</a>
-            <a href="#">Final</a>
-        </nav>
+      </div>
+
+      <nav>
+        <a href="./abertura.html">Abertura</a>
+        <a href="./alunos.html">Turma</a>
+        <a href="./funcionarios.html">Funcionários</a>
+        <a href="./destaques.html">Prêmios</a>
+        <a href="./encerramento.html">Encerrameto</a>
+      </nav>
     </header>
 
       <h2>Prêmios e Destaques.</h2>
       <p class="subtitulo">Honrando nossos talentos!</p>
 
+      <!-- Medalhas -->
       <div class="medals">
         <div class="medal medal-gold">
           <span class="medal-icon">🥇</span>
@@ -46,16 +45,100 @@
         </div>
       </div>
 
-      <div class="cards">
-        <div class="award-card"></div>
-        <div class="award-card"></div>
-        <div class="award-card"></div>
-        <div class="award-card"></div>
-      </div>
+
+  <!-- Cards de alunos destaque -->
+<div class="cards">
+
+  <div class="award-card"
+    data-nome="Ana Silva"
+    data-nota="9.8"
+    data-desc="Melhor desempenho em Matemática."
+    data-medalha="🥇">
+    <img src="../assets/alunos/ana.jpg" alt="Ana Silva">
+    <h3 class="card-nome">Ana Silva</h3>
+    <p class="card-desc">Melhor desempenho em Matemática.</p>
+  </div>
+
+  <div class="award-card"
+    data-nome="Bruno Costa"
+    data-nota="9.5"
+    data-desc="Destaque em Ciências e Projetos."
+    data-medalha="🥈">
+    <img src="../assets/alunos/bruno.jpg" alt="Bruno Costa">
+    <h3 class="card-nome">Bruno Costa</h3>
+    <p class="card-desc">Destaque em Ciências e Projetos.</p>
+  </div>
+
+  <div class="award-card"
+    data-nome="Carla Mendes"
+    data-nota="9.2"
+    data-desc="Excelência em Redação."
+    data-medalha="🥉">
+    <img src="../assets/alunos/carla.jpg" alt="Carla Mendes">
+    <h3 class="card-nome">Carla Mendes</h3>
+    <p class="card-desc">Excelência em Redação.</p>
+  </div>
+
+  <div class="award-card"
+    data-nome="Diego Ramos"
+    data-nota="9.0"
+    data-desc="Maior evolução no ano."
+    data-medalha="🥉">
+    <img src="../assets/alunos/diego.jpg" alt="Diego Ramos">
+    <h3 class="card-nome">Diego Ramos</h3>
+    <p class="card-desc">Maior evolução no ano.</p>
+  </div>
+
+  <!-- MAIS DESTAQUES -->
+  <div class="award-card"
+    data-nome="Julia Nogueira"
+    data-nota="9.7"
+    data-desc="Liderança exemplar ao longo do ano."
+    data-medalha="🥇">
+    <img src="../assets/alunos/julia.jpg" alt="Julia Nogueira">
+    <h3 class="card-nome">Julia Nogueira</h3>
+    <p class="card-desc">Liderança exemplar no ano.</p>
+  </div>
+
+  <div class="award-card"
+    data-nome="Ricardo Lopes"
+    data-nota="9.3"
+    data-desc="Melhor projeto interdisciplinar."
+    data-medalha="🥈">
+    <img src="../assets/alunos/ricardo.jpg" alt="Ricardo Lopes">
+    <h3 class="card-nome">Ricardo Lopes</h3>
+    <p class="card-desc">Melhor projeto interdisciplinar.</p>
+  </div>
+
+  <div class="award-card"
+    data-nome="Luana Alves"
+    data-nota="9.4"
+    data-desc="Criatividade em atividades artísticas."
+    data-medalha="🥉">
+    <img src="../assets/alunos/luana.jpg" alt="Luana Alves">
+    <h3 class="card-nome">Luana Alves</h3>
+    <p class="card-desc">Destaque artístico.</p>
+  </div>
+
+</div>
+
+
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h2 id="modal-nome"></h2>
+        <p><strong>Medalha:</strong> <span id="modal-medalha"></span></p>
+        <p><strong>Nota:</strong> <span id="modal-nota"></span></p>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2025 Bright Minds Academy — Todos os direitos reservados.</p>
-  </footer>
+    </footer>
   </body>
 </html>
