@@ -15,8 +15,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  flex-wrap: wrap;
+  padding: 10px ;
+  text-align: center;
 }
 
 header .logo {
@@ -40,6 +40,7 @@ header .barra {
   width: 2px;
   height: 30px;
   background: white;
+  
 }
 
 header .ano {
@@ -50,12 +51,14 @@ header .ano {
 header nav {
   display: flex;
   gap: 20px;
+  
 }
 
 header nav a {
   color: white;
   text-decoration: none;
   font-size: 15px;
+  
 }
 
 header nav a:hover {
