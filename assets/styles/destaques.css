@@ -1,14 +1,23 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Georgia", serif;
+:root {
+  --cor-principal: #1e2e4f;
+  --cor-secundaria: #31487a;
+  --cor-destaque: #203763;
 }
 
 body {
-  background: #f5f6fa;
-  color: #1d2333;
+  font-family: "Inria Serif", serif;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 40px;
 }
 
 header {
@@ -66,20 +75,18 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-h2 {
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 60px;
-  text-shadow: 2px 2px 3px #00000020;
+main h2 {
+  font-size: 50px;
+  color: var(--cor-principal);
+  margin-bottom: 5px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .subtitulo {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.5rem;
-  color: #444;
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
 }
-
 .medals {
   display: flex;
   justify-content: center;
@@ -272,10 +279,11 @@ h2 {
 /* FOOTER */
 /* ---------------------- */
 footer {
-  background: #0f2344;
+  background-color: var(--cor-destaque);
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 1rem;
+  padding: 15px 0;
+  font-size: 14px;
+  width: 100%;
+  margin-top: auto;
 }
