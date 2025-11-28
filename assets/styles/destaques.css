@@ -1,18 +1,35 @@
-/* ======= GERAL ======= */
-body {
-  font-family: "Inria Serif";
-  background: #F3F3F3;
+:root {
+  --cor-principal: #1e2e4f;
+  --cor-secundaria: #31487a;
+  --cor-destaque: #203763;
 }
 
-/* ======= HEADER ======= */
+body {
+  font-family: "Inria Serif", serif;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 header {
-  background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
+  background: linear-gradient(90deg, #1e2e4f 67.25%, #31487a 121.75%);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
   flex-wrap: wrap;
+  flex: 1;
+  text-align: center;
 }
 
 header .logo {
@@ -58,14 +75,10 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* ======= CONTEÚDO ======= */
-main {
-  text-align: center;
-}
-
 main h2 {
   font-size: 50px;
-  color: #1E2E4F;
+  color: var(--cor-principal);
+  margin-bottom: 5px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -74,106 +87,203 @@ main h2 {
   color: #000;
   margin-top: 5px;
 }
-
-/* ======= MEDALS ======= */
 .medals {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .medal {
-  width: 60px;
-  height: 60px;
-  background: #12284a;
+  width: 90px;
+  height: 90px;
+  background: #132c52;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  cursor: default;
+}
+
+.medal:hover {
+  transform: scale(1.10);
 }
 
 .medal-icon {
-  font-size: 32px;
+  font-size: 2.4rem;
 }
 
-/* ======= AWARD CARDS (Novo estilo) ======= */
+
+/* ====== GRID DOS CARDS ====== */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
+/* ====== CARD ====== */
 .award-card {
-  width: 240px;
   background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #d0d4e0;
+  border-radius: 8px;
+  width: 220px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-  padding-bottom: 15px;
 }
 
 .award-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .award-card img {
   width: 100%;
-  height: 260px;
+  height: 240px;
   object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
-.card-nome {
-  font-size: 20px;
-  text-align: center;
-  color: #1E2E4F;
-  margin: 12px 0 4px 0;
+.award-card h3 {
+  color: #203763;
+  font-size: 18px;
+  margin: 0;
 }
 
-.card-desc {
-  font-size: 15px;
-  text-align: center;
+.award-card p {
+  margin: 0;
+  font-size: 14px;
   color: #555;
 }
 
-
-/* ======= MODAL ======= */
+/* ====== MODAL / CARD DETALHES ====== */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
 .modal-content {
   background: white;
-  padding: 25px;
-  border-radius: 10px;
-  width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 450px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
-  border: 3px solid #1E2E4F;
+  position: relative;
 }
 
 .close {
-  float: right;
-  font-size: 24px;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
   cursor: pointer;
 }
 
+.modal-content h2 {
+  color: #203763;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #444;
+}
+
+.modal-content strong {
+  color: #203763;
+}
+
+/* Foto do modal caso queira usar depois */
+.foto-detalhe {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #31487a;
+}
+
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* BOTÃO DE FECHAR */
+.close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+  transition: 0.2s ease;
+}
+
+.close:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* NOME DO ALUNO */
+#modal-nome {
+  font-size: 2rem;        /* ↓ menor que antes */
+  font-weight: 700;
+  color: #1d2b4f;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+/* LINHAS DE TEXTO */
+.modal-content p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* DESTACAR TÍTULOS */
+.modal-content strong {
+  color: #1d2b4f;
+}
+
+/* MEDALHA COM ESTILO */
+#modal-medalha {
+  font-size: 1.5rem;
+  margin-left: 6px;
+}
+
+
+
+/* ---------------------- */
+/* FOOTER */
+/* ---------------------- */
 footer {
-  background: #1e2e4f;
+  background-color: var(--cor-destaque);
   color: white;
   text-align: center;
-  padding: 20px;
-  position: fixed;
+  padding: 15px 0;
+  font-size: 14px;
   width: 100%;
-  bottom: 0;
+  margin-top: auto;
 }
