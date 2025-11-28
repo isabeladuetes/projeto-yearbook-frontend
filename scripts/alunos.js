@@ -21,7 +21,7 @@ let alunos = [];
 let htmlInicialMain = ""; // Variável para salvar o estado inicial (lista + filtros)
 
 // Configuração da API e Foto Padrão
-const IP_DO_BACKEND = "10.88.199.137";
+const IP_DO_BACKEND = "10.88.200.159";
 const PORTA = 3001;
 const URL_BASE_API = `http://${IP_DO_BACKEND}:${PORTA}`;
 const FOTO_PADRAO =
