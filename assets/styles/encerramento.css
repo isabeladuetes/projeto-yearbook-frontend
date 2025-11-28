@@ -103,6 +103,10 @@ header nav a:hover {
   color: #000;
 }
 
+.texto p {
+  text-align: justify;
+}
+
 .frase {
   margin-top: 50px;
   color: #1e2e4f;

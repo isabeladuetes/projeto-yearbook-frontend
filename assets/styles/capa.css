@@ -68,6 +68,7 @@ body {
   box-shadow: 0 8px 18px rgba(3, 12, 30, 0.35);
   cursor: pointer;
   width: 180px;
+  text-decoration: none;
 }
 
 /* Coluna da direita */

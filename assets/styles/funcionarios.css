@@ -189,7 +189,7 @@ footer {
   background-color: #203763;
   color: white;
   text-align: center;
-  padding: 15px 0;
+  padding: 3px 0;
   font-size: 14px;
   margin-top: auto; /* Garante que o footer fique no final */
 }
