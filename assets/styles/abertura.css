@@ -1,3 +1,9 @@
+:root {
+  --cor-principal: #1e2e4f;
+  --cor-secundaria: #31487a;
+  --cor-destaque: #203763;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +12,11 @@
 
 body {
   font-family: "Inria Serif";
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 
 header {
-  background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
+  background: linear-gradient(90deg, #1e2e4f 67.25%, #31487a 121.75%);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -70,7 +76,7 @@ header nav a:hover {
 
 .mensagem h1 {
   font-size: 50px;
-  color: #1E2E4F;
+  color: #1e2e4f;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -97,7 +103,7 @@ header nav a:hover {
 .texto h2 {
   font-size: 25px;
   margin-bottom: 20px;
-  color: #31487A;
+  color: #31487a;
 }
 
 .imagens {
@@ -110,7 +116,7 @@ header nav a:hover {
   width: 49%;
   height: 300px;
   object-fit: cover;
-  border: 5px solid #31487A;
+  border: 5px solid #31487a;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
   background-color: transparent;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -121,16 +127,14 @@ header nav a:hover {
   transform: scale(1.03);
   box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.35);
 }
-
-/* Footer */
 footer {
-  background: #1e2e4f;
+  background-color: var(--cor-destaque);
   color: white;
   text-align: center;
-  padding: 20px;
-  position: fixed;
+  padding: 150px 0;
+  font-size: 14px;
   width: 100%;
-  bottom: 0;
+  margin-top: auto;
 }
 
 /* Responsividade */
@@ -141,7 +145,8 @@ footer {
     gap: 40px;
   }
 
-  .texto, .imagens {
+  .texto,
+  .imagens {
     width: 100%;
   }
 
@@ -155,7 +160,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-
   header {
     justify-content: center;
     padding: 15px;
@@ -212,4 +216,8 @@ footer {
   .texto {
     font-size: 16px;
   }
+}
+
+footer {
+  padding: 15px;
 }
