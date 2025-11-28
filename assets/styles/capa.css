@@ -64,6 +64,7 @@ body {
   font-size: 18px;
   box-shadow: 0 8px 18px rgba(3, 12, 30, 0.35);
   cursor: pointer;
+  width: 180px;
 }
 
 /* Coluna da direita */
