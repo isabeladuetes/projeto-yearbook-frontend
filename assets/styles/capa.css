@@ -1,22 +1,24 @@
-/* Estilos gerais */
+/* ============================
+   ESTILOS GERAIS
+================================ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background: #0f2140;
   font-family: "Georgia", serif;
 }
 
-body {
-  background: #0f2140;
-  font-family: "Georgia", serif;
-}
+/* ============================
+   LAYOUT PRINCIPAL
+================================ */
 
-/* Container de fundo */
 .page-bg {
   min-height: 100vh;
   width: 100%;
@@ -30,10 +32,13 @@ body {
   width: calc(100% - 60px);
   max-width: 1400px;
   min-height: calc(100vh - 80px);
-  justify-content: space-between; /* Alinha as colunas */
+  justify-content: space-between;
 }
 
-/* Coluna azul */
+/* ============================
+   COLUNA ESQUERDA (MENU)
+================================ */
+
 .esquerda {
   width: 360px;
   background: #14264a;
@@ -47,7 +52,6 @@ body {
 
 .topo-logo {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 18px;
 }
@@ -66,11 +70,11 @@ body {
   padding: 14px 28px;
   border-radius: 10px;
   font-size: 18px;
-  box-shadow: 0 8px 18px rgba(3, 12, 30, 0.35);
-  cursor: pointer;
   width: 180px;
   text-decoration: none;
+  cursor: pointer;
   margin-top: 20px;
+  box-shadow: 0 8px 18px rgba(3, 12, 30, 0.35);
   transition: background 0.3s ease;
 }
 
@@ -78,18 +82,20 @@ body {
   background: #1e2e4f;
 }
 
-/* Coluna da direita */
+/* ============================
+   COLUNA DIREITA
+================================ */
+
 .direita {
   flex: 1;
   position: relative;
 }
 
-/* Imagem grande */
+/* Imagem principal */
 .imagem {
   width: 100%;
   height: 340px;
   position: relative;
-  overflow: visible;
 }
 
 .imagem img {
@@ -105,12 +111,15 @@ body {
   width: 200px;
   height: 240px;
   background: rgba(34, 59, 104, 0.74);
+  border: 1px solid rgba(0, 0, 0, 0.35);
   top: 300px;
   left: -70px;
-  border: 1px solid rgba(0, 0, 0, 0.35);
 }
 
-/* Faixa inferior */
+/* ============================
+   FAIXA INFERIOR
+================================ */
+
 .faixa {
   background: #14264a;
   padding: 150px 60px;
@@ -124,19 +133,16 @@ body {
 .titulo {
   font-size: 64px;
   line-height: 0.95;
-  margin: 0;
   font-weight: 500;
   text-align: right;
 }
 
 .subtitulo {
+  font-size: 60px;
+  font-family: "Inria Serif";
+  font-weight: 400;
   text-align: right;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Inria Serif";
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   background: linear-gradient(
     90deg,
     rgba(143, 179, 226, 0.2) -18.89%,
@@ -147,11 +153,15 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Responsividade */
+/* ============================
+   RESPONSIVIDADE
+================================ */
+
 @media (max-width: 992px) {
   .page-bg {
     padding: 24px 0;
   }
+
   .site {
     flex-direction: column;
     width: calc(100% - 48px);
@@ -168,6 +178,7 @@ body {
   .imagem {
     height: 260px;
   }
+
   .retangulo {
     display: none;
   }
@@ -176,9 +187,11 @@ body {
     padding: 36px 28px;
     align-items: center;
   }
+
   .titulo {
     font-size: 40px;
   }
+
   .subtitulo {
     font-size: 16px;
   }
@@ -188,26 +201,33 @@ body {
   .page-bg {
     padding: 12px 0;
   }
+
   .esquerda {
     padding: 16px;
   }
+
   .logo {
     width: 56px;
     height: 56px;
   }
+
   .botao {
     padding: 12px 18px;
     font-size: 16px;
   }
+
   .imagem {
     height: 200px;
   }
+
   .faixa {
     padding: 24px 18px;
   }
+
   .titulo {
     font-size: 28px;
   }
+
   .subtitulo {
     font-size: 14px;
     letter-spacing: 1px;

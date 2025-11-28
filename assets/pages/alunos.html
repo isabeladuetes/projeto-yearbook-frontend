@@ -4,36 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yearbook 2025 - Turmas</title>
+
     <link rel="stylesheet" href="../styles/alunos.css" />
     <script src="/scripts/alunos.js" defer></script>
   </head>
+
   <body>
+    <header>
+      <div class="logo">
+        <img src="../img/logo.png" alt="Bright Minds Academy" />
 
-      <header>
-        <div class="logo">
-          <img src="../img/logo.png" alt="Bright Minds Academy" />
-
-          <div class="textos">
-            <span class="escola">Bright Minds Academy</span>
-            <span class="barra"></span>
-            <span class="ano">YEARBOOK 2025</span>
-          </div>
+        <div class="textos">
+          <span class="escola">Bright Minds Academy</span>
+          <span class="barra"></span>
+          <span class="ano">YEARBOOK 2025</span>
         </div>
+      </div>
 
-        <nav>
-          <a href="./abertura.html">Abertura</a>
-          <a href="./alunos.html">Turma</a>
-          <a href="./funcionarios.html">Funcionários</a>
-          <a href="./destaques.html">Prêmios</a>
-          <a href="./encerramento.html">Encerrameto</a>
-        </nav>
-      </header>
+      <nav>
+        <a href="./abertura.html">Abertura</a>
+        <a href="./alunos.html">Turma</a>
+        <a href="./funcionarios.html">Funcionários</a>
+        <a href="./destaques.html">Prêmios</a>
+        <a href="./encerramento.html">Encerrameto</a>
+      </nav>
+    </header>
 
-      <main>
+    <main>
       <h2>Turmas 2025.</h2>
       <h2 class="subtitulo">Nossos alunos, nossa história!</h2>
 
       <div class="filtro">
+
         <div class="busca">
           <input id="inputBuscar" placeholder="Buscar aluno por nome..." />
           <button id="btnBuscar">Pesquisar</button>
@@ -45,10 +47,10 @@
           <option value="Feminino">Feminino</option>
           <option value="Masculino">Masculino</option>
         </select>
+
       </div>
 
       <div id="lista" class="grade-alunos"></div>
-
       <div id="detalhes" class="detalhes-card"></div>
     </main>
 
