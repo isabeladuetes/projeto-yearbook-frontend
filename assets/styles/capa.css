@@ -46,13 +46,16 @@ body {
 /* Logo e texto */
 .topo-logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 18px;
 }
 
-.logo {
-  width: 78px;
-  border-radius: 50%;
+.logo-texto {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .botao {
@@ -90,12 +93,12 @@ body {
 
 /* Retângulo sobreposto */
 .retangulo {
-  position: absolute; /* faz o retângulo ficar posicionado em relação ao pai (.imagem) */
+  position: absolute;
   width: 200px;
   height: 240px;
   background: rgba(34, 59, 104, 0.74);
-  top: 120px; /* ajustado para ficar dentro da imagem */
-  left: 20px;
+  top: 180px; /* antes 120px → desce mais */
+  left: -40px; /* antes 20px → vai mais para a esquerda */
   border: 1px solid rgba(0, 0, 0, 0.35);
 }
 
