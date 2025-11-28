@@ -239,3 +239,8 @@ footer {
     padding: 15px;
   }
 }
+
+/* Para esconder a div vazia */
+#detalhes:empty {
+  display: none;
+}
