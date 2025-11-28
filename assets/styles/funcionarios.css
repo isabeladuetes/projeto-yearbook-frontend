@@ -8,7 +8,6 @@ body {
   min-height: 100vh;
 }
 
-/* ====== HEADER ====== */
 header {
   background: linear-gradient(90deg, #1E2E4F 67.25%, #31487A 121.75%);
   color: white;
@@ -65,13 +64,13 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* ====== CONTEÚDO PRINCIPAL (Main) ====== */
 main {
-  flex: 1; /* Permite que o conteúdo principal cresça */
+  flex: 1;
   text-align: center;
+  padding-bottom: 40px;
 }
 
-main h2 {
+main h1 {
   font-size: 50px;
   color: #1E2E4F;
   margin-bottom: 5px;
@@ -84,7 +83,6 @@ main h2 {
   margin-top: 5px;
 }
 
-/* ====== FILTROS ====== */
 .filtro {
   display: flex;
   justify-content: center;
@@ -94,9 +92,16 @@ main h2 {
   flex-wrap: wrap;
 }
 
-.filtro input, .filtro select {
-  padding: 8px;
+.filtro input {
+    padding: 8px;
   width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} 
+
+.filtro select {
+  padding: 8px;
+  width: 120px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -110,12 +115,12 @@ main h2 {
   cursor: pointer;
 }
 
-/* ====== FUNCIONÁRIOS GRID ====== */
 .grade-funcionarios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 20px; /* Ajusta o espaçamento entre os cards */
   justify-items: center;
+  padding: 0 20px; /* Adiciona um espaçamento lateral ao redor da grade */
 }
 
 .funcionario {
@@ -134,6 +139,7 @@ main h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+
 .funcionario img {
   width: 100%;
   height: 240px;
@@ -148,13 +154,12 @@ main h2 {
   margin: 0;
 }
 
-/* ====== CARD DE DETALHES (Estilo para o conteúdo injetado) ====== */
 .detalhes-card {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   max-width: 450px;
-  margin: 60px auto;
+  margin: 148px auto;
   padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -184,18 +189,11 @@ main h2 {
     background-color: #2a3c5a;
 }
 
-/* ====== RODAPÉ ====== */
 footer {
   background-color: #203763;
   color: white;
   text-align: center;
   padding: 3px 0;
   font-size: 14px;
-  margin-top: auto; /* Garante que o footer fique no final */
-}
-
-/* ====== MEDIA QUERIES ====== */
-@media (max-width: 768px) {
-  /* ... (Responsividade do seu código original) ... */
-  /* Removi o 'position: fixed' do footer, pois causava conflito com o body flex */
+  margin-top: auto; 
 }

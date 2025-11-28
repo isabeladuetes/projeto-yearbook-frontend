@@ -97,10 +97,16 @@ main h2 {
   flex-wrap: wrap;
 }
 
-.filtro input,
-.filtro select {
+.filtro input {
   padding: 8px;
   width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filtro select {
+  padding: 8px;
+  width: 12 0px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -155,6 +161,7 @@ main h2 {
   font-size: 18px;
   margin: 0;
 }
+
 .aluno p {
   margin: 0;
   font-size: 14px;
@@ -240,7 +247,6 @@ footer {
   }
 }
 
-/* Para esconder a div vazia */
 #detalhes:empty {
   display: none;
 }

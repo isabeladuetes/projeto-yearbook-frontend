@@ -49,7 +49,7 @@ async function buscarFuncionariosDaAPI() {
   }
   
   try {
-      const resposta = await fetch("http://10.88.200.159:3001/funcionarios");
+      const resposta = await fetch("http://10.88.199.173:3001/funcionarios");
 
       if (!resposta.ok) {
           throw new Error(`Erro HTTP: ${resposta.status} - ${resposta.statusText}`);
