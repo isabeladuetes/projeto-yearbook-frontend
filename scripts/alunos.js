@@ -1,6 +1,5 @@
-// Arquivo: alunos.js
 
-// 1. FUNÇÃO DE UTILIDADE PARA NORMALIZAÇÃO
+// FUNÇÃO DE UTILIDADE PARA NORMALIZAÇÃO
 function normalizarString(str) {
   if (!str) return "";
   return str
@@ -21,7 +20,7 @@ let alunos = [];
 let htmlInicialMain = ""; // Variável para salvar o estado inicial (lista + filtros)
 
 // Configuração da API e Foto Padrão
-const IP_DO_BACKEND = "10.88.199.173";
+const IP_DO_BACKEND = "10.88.200.163";
 const PORTA = 3001;
 const URL_BASE_API = `http://${IP_DO_BACKEND}:${PORTA}`;
 const FOTO_PADRAO =

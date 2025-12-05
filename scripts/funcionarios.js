@@ -1,15 +1,10 @@
-// Arquivo: funcionarios.js
 
-// 1. FUNÇÃO DE UTILIDADE PARA NORMALIZAÇÃO (NOVO)
-// Remove acentos e caracteres especiais, e converte para minúsculas.
 function normalizarString(str) {
   if (!str) return '';
-  // .normalize("NFD") separa os acentos (e.g., 'á' vira 'a' + '´').
-  // .replace() remove os códigos de acento (os combinantes Unicode).
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-// 2. ACESSO AO DOM E VARIÁVEIS DE ESTADO
+
 const mainElement = document.querySelector("main");
 const lista = document.getElementById("lista"); 
 const inputBuscar = document.getElementById("inputBuscar");
@@ -18,11 +13,11 @@ const btnReset = document.getElementById("btnResetar");
 const selectSetor = document.getElementById("selectTurma"); 
 
 let funcionarios = [];
-let htmlInicialMain = ""; // Variável para salvar o estado inicial da página (usado para o botão "Voltar")
+let htmlInicialMain = ""; 
 
 const FOTO_PADRAO = "https://i.ibb.co/8gkc15cn/foto-de-anurio-de-um-funcionrio-da-escola-o-indivduo-tem-entre-30-e-40-anos-a-foto-um-retrato-de-b-5.png"; 
 
-// 3. FUNÇÃO DE RESTAURAÇÃO DE TELA
+//  FUNÇÃO DE RESTAURAÇÃO DE TELA
 function restaurarLista() {
   // Restaura o HTML de filtros e lista
   mainElement.innerHTML = htmlInicialMain;
@@ -40,7 +35,7 @@ function restaurarLista() {
   mostrarLista(funcionarios);
 }
 
-// 4. FUNÇÃO PARA BUSCAR DADOS DA API
+// FUNÇÃO PARA BUSCAR DADOS DA API
 async function buscarFuncionariosDaAPI() {
   // Salva o HTML inicial do <main> na primeira execução
   if (htmlInicialMain === "") {
@@ -49,7 +44,7 @@ async function buscarFuncionariosDaAPI() {
   }
   
   try {
-      const resposta = await fetch("http://10.88.199.173:3001/funcionarios");
+      const resposta = await fetch("http://10.88.200.163:3001/funcionarios");
 
       if (!resposta.ok) {
           throw new Error(`Erro HTTP: ${resposta.status} - ${resposta.statusText}`);
@@ -125,9 +120,9 @@ function mostrarDetalhes(funcionario) {
 }
 
 
-// 7. FUNÇÃO DE FILTRAGEM (CORRIGIDA)
+// FUNÇÃO DE FILTRAGEM (CORRIGIDA)
 function filtrar() {
-  // ⚠️ Usa normalização para a busca de nome
+
   const termoNormalizado = normalizarString(inputBuscar.value);
   const setorSelecionado = selectSetor.value; // 'todos', 'Professor', 'coordenador', 'Diretor'
 
@@ -142,7 +137,6 @@ function filtrar() {
           return passaNoNome;
       } else {
           // 2. Filtro por setor: O cargo deve INCLUIR o valor selecionado
-          // Ex: Se setorSelecionado="Professor" e o cargo for "Professora de História", funciona.
           const cargoNormalizado = normalizarString(f.cargo);
           const setorNormalizado = normalizarString(setorSelecionado);
 
@@ -156,7 +150,7 @@ function filtrar() {
   mostrarLista(filtrados);
 }
 
-// 8. LISTENERS INICIAIS
+// LISTENERS INICIAIS
 btnBuscar.onclick = () => filtrar();
 btnReset.onclick = () => {
   inputBuscar.value = "";
@@ -165,5 +159,5 @@ btnReset.onclick = () => {
 };
 selectSetor.onchange = () => filtrar();
 
-// 9. INICIALIZAÇÃO
+// INICIALIZAÇÃO
 buscarFuncionariosDaAPI();

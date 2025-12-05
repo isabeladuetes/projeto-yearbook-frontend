@@ -4,6 +4,7 @@
   --cor-destaque: #203763;
 }
 
+/* Estrutura geral */
 body {
   font-family: "Inria Serif", serif;
   margin: 0;
@@ -20,16 +21,15 @@ main {
   padding-bottom: 40px;
 }
 
+/* Cabeçalho com logo e menu */
 header {
-  background: linear-gradient(90deg, #1e2e4f 67.25%, #31487a 121.75%);
+  background: linear-gradient(90deg, #1e2e4f, #31487a);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
   flex-wrap: wrap;
-  flex: 1;
-  text-align: center;
 }
 
 header .logo {
@@ -57,7 +57,6 @@ header .barra {
 
 header .ano {
   font-size: 22px;
-  letter-spacing: 1px;
 }
 
 header nav {
@@ -75,6 +74,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
+/* Títulos da página */
 main h2 {
   font-size: 50px;
   color: var(--cor-principal);
@@ -87,6 +87,8 @@ main h2 {
   color: #000;
   margin-top: 5px;
 }
+
+/* Medalhas */
 .medals {
   display: flex;
   justify-content: center;
@@ -103,7 +105,6 @@ main h2 {
   align-items: center;
   justify-content: center;
   transition: 0.3s ease;
-  cursor: default;
 }
 
 .medal:hover {
@@ -114,7 +115,7 @@ main h2 {
   font-size: 2.4rem;
 }
 
-/* ====== GRID DOS CARDS ====== */
+/* Cards em grid responsivo */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -122,7 +123,7 @@ main h2 {
   justify-items: center;
 }
 
-/* ====== CARD ====== */
+/* Card individual */
 .award-card {
   background: white;
   border: 1px solid #d0d4e0;
@@ -130,8 +131,7 @@ main h2 {
   width: 220px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .award-card:hover {
@@ -159,7 +159,7 @@ main h2 {
   color: #555;
 }
 
-/* ====== MODAL / CARD DETALHES ====== */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -175,48 +175,51 @@ main h2 {
 
 .modal-content {
   background: white;
-  border: 1px solid #ddd;
   border-radius: 8px;
   max-width: 450px;
   padding: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
+  animation: modalPop 0.25s ease;
 }
 
 .close {
   position: absolute;
-  top: 12px;
-  right: 15px;
+  top: 18px;
+  right: 22px;
   font-size: 22px;
   cursor: pointer;
-}
-
-.modal-content h2 {
-  color: #203763;
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.modal-content p {
-  font-size: 16px;
   color: #444;
 }
 
+.close:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+#modal-nome {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d2b4f;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
 .modal-content strong {
-  color: #203763;
+  color: #1d2b4f;
 }
 
-/* Foto do modal caso queira usar depois */
-.foto-detalhe {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 4px solid #31487a;
+#modal-medalha {
+  font-size: 1.5rem;
+  margin-left: 6px;
 }
 
+/* Animação */
 @keyframes modalPop {
   from {
     opacity: 0;
@@ -228,59 +231,94 @@ main h2 {
   }
 }
 
-/* BOTÃO DE FECHAR */
-.close {
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  font-size: 22px;
-  cursor: pointer;
-  color: #444;
-  transition: 0.2s ease;
-}
-
-.close:hover {
-  color: #000;
-  transform: scale(1.1);
-}
-
-/* NOME DO ALUNO */
-#modal-nome {
-  font-size: 2rem; /* ↓ menor que antes */
-  font-weight: 700;
-  color: #1d2b4f;
-  margin-bottom: 15px;
-  letter-spacing: -0.5px;
-}
-
-/* LINHAS DE TEXTO */
-.modal-content p {
-  margin: 6px 0;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* DESTACAR TÍTULOS */
-.modal-content strong {
-  color: #1d2b4f;
-}
-
-/* MEDALHA COM ESTILO */
-#modal-medalha {
-  font-size: 1.5rem;
-  margin-left: 6px;
-}
-
-/* ---------------------- */
-/* FOOTER */
-/* ---------------------- */
-
+/* Rodapé */
 footer {
   background-color: var(--cor-destaque);
   color: white;
   text-align: center;
   padding: 3px 0;
   font-size: 14px;
-  width: 100%;
   margin-top: auto;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+
+/* Ajustes para tablets */
+@media (max-width: 992px) {
+  header {
+    padding: 12px 20px;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main h2 {
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  header .logo img {
+    height: 46px;
+  }
+
+  header .textos {
+    font-size: 16px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+
+  .medals {
+    gap: 20px;
+  }
+
+  .medal {
+    width: 70px;
+    height: 70px;
+  }
+
+  main h2 {
+    font-size: 32px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .award-card {
+    width: 90%;
+  }
+}
+
+/* Extra pequeno (mini smartphones) */
+@media (max-width: 400px) {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .medal {
+    width: 60px;
+    height: 60px;
+  }
+
+  main h2 {
+    font-size: 26px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
 }
